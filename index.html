@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <!-- Font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>BUDGET APP</header>
+    <main>
+      <!-- Left Side -->
+      <section id="budget-app-controls">
+        <div id="budget-amount">
+          <div class="budget-app-control">
+            <label>Budget Amount($)</label>
+            <input type="number" class="budget-app-control-input budget-amount" />
+            <button class="budget-app-control-button budget-amount-add">Add Budget</button>
+          </div>
+        </div>
+        <div id="expense-details">
+          <div class="budget-app-control">
+            <label for="">Expense Title</label>
+            <input type="text" class="budget-app-control-input expense-title" />
+          </div>
+          <div class="budget-app-control">
+            <label for="">Expense Amount($)</label>
+            <input type="number" class="budget-app-control-input expense-amount" />
+          </div>
+          <button class="budget-app-control-button expense-add-edit">Add Expense</button>
+        </div>
+      </section>
+      <!-- Right Side -->
+      <section id="budget-app-details">
+        <div id="budget-expense-details">
+          <div>
+            <div class="amount-label">BUDGET</div>
+            <div class="amount-value" id="budget-amount-value">$0</div>
+          </div>
+          <div>
+            <div class="amount-label">EXPENSES</div>
+            <div class="amount-value" id="expense-amount-value">$0</div>
+          </div>
+          <div>
+            <div class="amount-label">BALANCE</div>
+            <div class="amount-value" id="balance-amount-value">$0</div>
+          </div>
+        </div>
+        <div id="expense-list">
+          <table class="expense-list-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="expense-list-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

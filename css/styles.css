@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 0.1;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  flex: 0.9;
+  padding: 10px 30px;
+  display: flex;
+  gap: 40px;
+}
+
+#budget-app-controls,
+#budget-app-details {
+  flex: 0.5;
+}
+
+#budget-app-controls,
+#budget-app-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#budget-amount,
+#budget-expense-details {
+  flex: 0.4;
+  display: flex;
+  gap: 100px;
+}
+
+#expense-details,
+#expense-list {
+  flex: 0.6;
+}
+
+.budget-app-control {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.budget-app-control-input {
+  padding: 7px 10px;
+  outline: none;
+}
+
+.budget-app-control-button {
+  width: 250px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.amount-label {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.amount-value {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.expense-add-edit {
+  margin-top: 0.7rem;
+}
+
+#expense-details .budget-app-control:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.expense-list-table th,
+.expense-list-table td {
+  padding: 1rem 3rem;
+}
