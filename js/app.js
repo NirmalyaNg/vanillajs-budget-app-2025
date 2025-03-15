@@ -1,5 +1,6 @@
 let expenses = [];
 
+// Global variable to track the entered budget amount
 let budgetAmount = 0;
 let mode = 'ADD_EXPENSE';
 let expenseId = null;
@@ -47,7 +48,7 @@ function updateExpenseList() {
 
       mode = 'EDIT_EXPENSE';
       expenseId = expense.id;
-      addOrEditExpenseButton.textContent = 'EDIT_EXPENSE';
+      addOrEditExpenseButton.textContent = 'EDIT EXPENSE';
     });
 
     // Remove Expense
@@ -92,16 +93,17 @@ addOrEditExpenseButton.addEventListener('click', () => {
   // RESET
   mode = 'ADD_EXPENSE';
   expenseId = null;
-  addOrEditExpenseButton.textContent = 'ADD_EXPENSE';
+  addOrEditExpenseButton.textContent = 'ADD EXPENSE';
   expenseTitleInput.value = '';
   expenseAmountInput.value = '';
 });
 
 // Add Budget
 budgetAmountAddButton.addEventListener('click', () => {
-  const enteredBudgetAmount = budgetAmountInput.value?.trim();
-  if (!!enteredBudgetAmount?.length && Number(enteredBudgetAmount) > 0) {
-    budgetAmount = Number(enteredBudgetAmount);
+  const enteredBudgetAmountStr = budgetAmountInput.value.trim(); // '10000'
+  const enteredBudgetAmount = Number(enteredBudgetAmountStr); // 10000
+  if (enteredBudgetAmount > 0) {
+    budgetAmount = enteredBudgetAmount;
     calculateAndUpdateAmounts();
   }
   budgetAmountInput.value = '';
