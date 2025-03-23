@@ -1,9 +1,15 @@
-let expenses = [];
+let expenses = []; // To store the expenses
+// {
+//   title: 'Buy a coffee',
+//   amount: 120,
+//   id: 'expense-1'
+// },
+// Structure of each expense object
 
 // Global variable to track the entered budget amount
-let budgetAmount = 0;
-let mode = 'ADD_EXPENSE';
-let expenseId = null;
+let budgetAmount = 0; // To store the entered budget amount
+let mode = 'ADD_EXPENSE'; // To store the current mode (ADD_EXPENSE or EDIT_EXPENSE)
+let expenseId = null; // To store the id of the expense which we are currently editing
 
 // DOM Elements
 const tableBody = document.querySelector('#expense-list-table-body');
@@ -73,12 +79,12 @@ function updateExpenseList() {
 
 // Add or edit expense
 addOrEditExpenseButton.addEventListener('click', () => {
-  const enteredExpenseTitle = expenseTitleInput.value?.trim();
-  const enteredExpenseAmount = expenseAmountInput.value?.trim();
+  const enteredExpenseTitle = expenseTitleInput.value.trim(); // 'Buy a pen'
+  const enteredExpenseAmount = expenseAmountInput.value.trim(); // '1000'
 
   if (mode === 'ADD_EXPENSE') {
     expenses.push({
-      id: `expense-${expenses.length + 1}`,
+      id: 'expense' + '-' + (expenses.length + 1),
       title: enteredExpenseTitle,
       amount: Number(enteredExpenseAmount),
     });
