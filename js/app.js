@@ -104,7 +104,7 @@ budgetAmountAddButton.addEventListener('click', () => {
   const enteredBudgetAmount = Number(enteredBudgetAmountStr); // 10000
   if (enteredBudgetAmount > 0) {
     budgetAmount = enteredBudgetAmount;
-    calculateAndUpdateAmounts();
+    calculateAndUpdateAmounts(); // Call function to update calculations
   }
   budgetAmountInput.value = '';
 });
