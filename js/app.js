@@ -1,3 +1,5 @@
+// Budget App
+
 let expenses = []; // To store the expenses
 // {
 //   title: 'Buy a coffee',
